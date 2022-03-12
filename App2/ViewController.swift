@@ -65,6 +65,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        do {
+            if editingStyle == .delete{
+                if let tablaa = myTable{
+                    manageObjectContext?.delete(searchResult[indexPath.row])
+                    searchResult.remove(at: indexPath.row)
+                    tablaa.deleteRows(at: [indexPath], with: .fade)
+                }
+            }
+            try manageObjectContext?.save()}catch let error as NSError {print(error) }
+        }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
        
