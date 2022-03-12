@@ -24,9 +24,9 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(name: String?, lastname: String?){
-        self.lblName.text = name
-        self.lblPhone.text = lastname
+    func configure(name: String?, phone: String?, lastname: String?){
+        self.lblName.text = name! + " " + lastname!
+        self.lblPhone.text = phone
      
     }
 

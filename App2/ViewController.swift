@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myTable: UITableView!
     
@@ -19,7 +19,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cellReuseIdentifier = "cell"
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.myTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
         
         myTable.delegate = self
@@ -58,10 +57,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if searchResult.count  > 0{
             let name = searchResult[indexPath.row].name
+            let phone = searchResult[indexPath.row].phone
             let lastname = searchResult[indexPath.row].lastname
-        
             
-            cell?.configure(name: name, lastname: lastname)
+            cell?.configure(name: name, phone: phone, lastname: lastname)
         }
         return cell!
     }
