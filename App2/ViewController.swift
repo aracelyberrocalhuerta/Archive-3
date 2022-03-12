@@ -67,11 +67,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+       
         if segue.identifier == "detail" {
-            guard let indexPath = self.myTable.indexPathForSelectedRow else {
-return
-        }
-            let selectedItem: NSManagedObject = searchResult[indexPath.row] as NSManagedObject
+            guard let indexPath = self.myTable.indexPathForSelectedRow else {return}
+            let selectedItem: NSManagedObject = searchResult[indexPath.row] 
             if let vistaDetalle = segue.destination as? DetailViewController {
                 vistaDetalle.contact = selectedItem
             }

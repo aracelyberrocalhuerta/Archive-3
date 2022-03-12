@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		39C6C14B27DCC86500CFD5CD /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C6C14927DCC86500CFD5CD /* Contact+CoreDataClass.swift */; };
 		39C6C14C27DCC86500CFD5CD /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C6C14A27DCC86500CFD5CD /* Contact+CoreDataProperties.swift */; };
+		39C6C14E27DCD74100CFD5CD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C6C14D27DCD74100CFD5CD /* EditViewController.swift */; };
 		39DE9E4527DA8F9E0067C94A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39DE9E4327DA8F9E0067C94A /* Model.xcdatamodeld */; };
 		39DE9E4727DA91110067C94A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE9E4627DA91110067C94A /* CoreDataManager.swift */; };
 		39DE9E5127DA979A0067C94A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE9E5027DA979A0067C94A /* DetailViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		39C6C14927DCC86500CFD5CD /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
 		39C6C14A27DCC86500CFD5CD /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39C6C14D27DCD74100CFD5CD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		39DE9E4427DA8F9E0067C94A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		39DE9E4627DA91110067C94A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		39DE9E5027DA979A0067C94A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				39DE9E4627DA91110067C94A /* CoreDataManager.swift */,
 				39DE9E5227DA9BC90067C94A /* AddViewController.swift */,
 				39DE9E5427DAA8390067C94A /* TableViewCell.swift */,
+				39C6C14D27DCD74100CFD5CD /* EditViewController.swift */,
 			);
 			path = App2;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				39C6C14C27DCC86500CFD5CD /* Contact+CoreDataProperties.swift in Sources */,
 				39DE9E5527DAA8390067C94A /* TableViewCell.swift in Sources */,
 				39DE9E4527DA8F9E0067C94A /* Model.xcdatamodeld in Sources */,
+				39C6C14E27DCD74100CFD5CD /* EditViewController.swift in Sources */,
 				A2B94860278EE1B10099A526 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
