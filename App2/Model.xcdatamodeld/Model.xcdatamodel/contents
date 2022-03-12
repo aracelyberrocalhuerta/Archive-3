@@ -4,7 +4,7 @@
         <attribute name="adress" optional="YES" attributeType="String"/>
         <attribute name="birthdate" optional="YES" attributeType="String"/>
         <attribute name="category" optional="YES" attributeType="String"/>
-        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="lastname" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>

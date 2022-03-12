@@ -10,18 +10,13 @@ import CoreData
 
 class CoreDataManager {
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "MiModeloCoreData")
-        container.loadPersistentStores { (storeDescription, error ) in guard let error = error else {return}
-            if let error = error as NSError?{
-                fatalError()
-            }
-    }
+        let container = NSPersistentContainer(name: "Model")
+        container.loadPersistentStores { storeDescripcion, Error in
+            guard let error = Error else {return}
+        }
         return container
 }()
-    static let shared: CoreDataManager = {
-        let instance = CoreDataManager()
-        return instance
-    }()
+  
     
     func saveContext(){
         let context = persistentContainer.viewContext
@@ -30,10 +25,13 @@ class CoreDataManager {
             do{
                 try context.save()
             }catch{
-                let error = error as NSError
                 print("Error")
             }
         }
     }
+    static let shared: CoreDataManager = {
+        let instance = CoreDataManager()
+        return instance
+    }()
 
 }

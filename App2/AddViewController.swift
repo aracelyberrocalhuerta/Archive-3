@@ -30,8 +30,11 @@ class AddViewController: UIViewController {
     
    
     @IBAction func saveContact(_ sender: Any) {
+        
+
         let managedObjectContext = CoreDataManager.shared.persistentContainer.viewContext
         let newContact = NSEntityDescription.insertNewObject(forEntityName: "Contact", into: managedObjectContext) as! Contact
+        
         
         newContact.name = txtName.text
         newContact.lastname = txtLastname.text
@@ -39,9 +42,12 @@ class AddViewController: UIViewController {
         newContact.phone = txtPhone.text
         newContact.category = txtCategory.text
         newContact.adress = txtAdress.text
+        newContact.image = "image"
         
         CoreDataManager.shared.saveContext()
         self.navigationController?.popToRootViewController(animated: true)
-    }
+        }
+           
+    
     
 }
