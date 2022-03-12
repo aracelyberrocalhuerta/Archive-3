@@ -29,7 +29,20 @@ class DetailViewController: UIViewController {
             lblPhone.text = contact.value(forKey: "phone") as! String?
             lblCategory.text = contact.value(forKey: "category") as! String?
             lblBirthday.text = contact.value(forKey: "birthdate") as! String?
-            lblAdress.text = contact.value(forKey: "adress") as! String?        }
+            lblAdress.text = contact.value(forKey: "adress") as! String?
+        
+        if (UserDefaults.standard.integer(forKey: "detalleFuente") != nil){
+            
+            var size = UserDefaults.standard.integer(forKey: "detalleFuente")
+            lblName.font = UIFont(name: lblName.font.fontName, size: CGFloat(size))
+            lblLastname.font = UIFont(name: lblLastname.font.fontName, size: CGFloat(size))
+            lblCategory.font = UIFont(name: lblCategory.font.fontName, size: CGFloat(size))
+            lblBirthday.font = UIFont(name: lblBirthday.font.fontName, size: CGFloat(size))
+            lblAdress.font = UIFont(name: lblAdress.font.fontName, size: CGFloat(size))
+            lblPhone.font = UIFont(name: lblPhone.font.fontName, size: CGFloat(size))
+            
+        }
+    }
        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

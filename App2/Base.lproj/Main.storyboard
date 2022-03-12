@@ -216,14 +216,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="RhZ-6f-nfZ" kind="relationship" relationship="viewControllers" id="axE-4b-sBi"/>
-                        <segue destination="6Bd-h1-P5r" kind="relationship" relationship="viewControllers" id="uRC-9o-Q0r"/>
+                        <segue destination="L9K-Rb-VPb" kind="relationship" relationship="viewControllers" id="uRC-9o-Q0r"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDi-Rl-YNC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-791" y="17"/>
         </scene>
-        <!--Settings-->
+        <!--Config View Controller-->
         <scene sceneID="oAf-DZ-g2e">
             <objects>
                 <viewController id="6Bd-h1-P5r" customClass="ConfigViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +232,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuente Tabla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEZ-1B-XUW">
-                                <rect key="frame" x="88" y="134" width="98" height="21"/>
+                                <rect key="frame" x="88" y="178" width="98" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="AVO-uf-zMt"/>
                                 </constraints>
@@ -241,13 +241,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YW3-xG-6an">
-                                <rect key="frame" x="88" y="214" width="250" height="30"/>
+                                <rect key="frame" x="88" y="258" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="Bn3-C9-Whk"/>
                                 </constraints>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuente Detalle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4V-lS-wfO">
-                                <rect key="frame" x="90" y="312" width="110" height="21"/>
+                                <rect key="frame" x="90" y="356" width="110" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="U6D-jU-C2a"/>
                                 </constraints>
@@ -256,13 +256,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T00-MT-Dfa">
-                                <rect key="frame" x="90" y="386" width="248" height="30"/>
+                                <rect key="frame" x="90" y="430" width="248" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="Rlj-4R-tHk"/>
                                 </constraints>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ox-fr-zt9">
-                                <rect key="frame" x="88" y="464" width="41" height="21"/>
+                                <rect key="frame" x="88" y="508" width="41" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ZJN-9e-txp"/>
                                 </constraints>
@@ -271,7 +271,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThB-Dj-W7N">
-                                <rect key="frame" x="-1" y="510" width="428" height="162"/>
+                                <rect key="frame" x="-1" y="554" width="428" height="118"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6Bd-h1-P5r" id="tEl-Os-pcz"/>
                                     <outlet property="delegate" destination="6Bd-h1-P5r" id="z57-ML-LP4"/>
@@ -299,11 +299,22 @@
                             <constraint firstItem="YW3-xG-6an" firstAttribute="top" secondItem="mEZ-1B-XUW" secondAttribute="bottom" constant="59" id="xmU-JY-KRe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="4jZ-a6-ng8"/>
+                    <navigationItem key="navigationItem" id="ZRg-h5-XTy">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="fQr-mk-2xf">
+                            <connections>
+                                <action selector="save:" destination="6Bd-h1-P5r" id="3iU-r5-8C2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="picker" destination="ThB-Dj-W7N" id="pcz-bJ-VkQ"/>
+                        <outlet property="sliderDetalleFuente" destination="T00-MT-Dfa" id="rRD-85-Wlb"/>
+                        <outlet property="sliderTablaFuente" destination="YW3-xG-6an" id="luI-BL-6wT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkQ-CC-oVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2.8037383177570092" y="449.67602591792661"/>
+            <point key="canvasLocation" x="902.80373831775694" y="449.67602591792661"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="QFT-w9-nYx">
@@ -553,6 +564,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfr-oi-385" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2725" y="-238"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="3ZW-Nx-MP6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L9K-Rb-VPb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="4jZ-a6-ng8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hLn-vD-wmn">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Bd-h1-P5r" kind="relationship" relationship="rootViewController" id="7TT-ye-NTJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oge-ZN-aCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8037383177570092" y="449.67602591792661"/>
         </scene>
     </scenes>
     <resources>

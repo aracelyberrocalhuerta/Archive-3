@@ -25,8 +25,18 @@ class TableViewCell: UITableViewCell {
     }
     
     func configure(name: String?, phone: String?, lastname: String?){
+        
+        
         self.lblName.text = name! + " " + lastname!
         self.lblPhone.text = phone
+        
+        if (UserDefaults.standard.integer(forKey: "tablaFuente") != nil){
+            
+            var size = UserDefaults.standard.integer(forKey: "tablaFuente")
+            lblName.font = UIFont(name: lblName.font.fontName, size: CGFloat(size))
+            lblPhone.font = UIFont(name: lblPhone.font.fontName, size: CGFloat(size))
+        }
+
      
     }
 

@@ -30,6 +30,7 @@ class EditViewController: UIViewController {
         txtAdress.text = contact.value(forKey: "adress") as! String?
         phone.text = contact.value(forKey: "phone") as! String?
         txtCategory.text = contact.value(forKey: "category") as! String?
+        
     }
     
 
@@ -42,6 +43,7 @@ class EditViewController: UIViewController {
         contact.setValue(txtCategory.text, forKey: "category")
         CoreDataManager.shared.saveContext()
     }
+    
     /*
     // MARK: - Navigation
 
