@@ -102,6 +102,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myTable" destination="ToT-hT-XF6" id="oig-5H-jOz"/>
+                        <outlet property="segment" destination="Mvz-xw-rcn" id="XKZ-6a-MO3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyP-yt-mez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

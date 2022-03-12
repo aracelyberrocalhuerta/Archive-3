@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         view.backgroundColor = UIColor(named: "background")
         myTable.delegate = self
         myTable.dataSource = self
@@ -28,10 +29,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    @IBOutlet weak var segment: UISegmentedControl!
+    
     private func getContext() -> NSManagedObjectContext{
         return CoreDataManager.shared.persistentContainer.viewContext
     }
     
+
     override func viewDidAppear(_ animated: Bool) {
         do{
             searchResult = try getContext().fetch(fetchRequest)
@@ -55,6 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(searchResult)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell
         cell?.backgroundColor = UIColor(named: "background")
+       
         if searchResult.count  > 0{
             let name = searchResult[indexPath.row].name
             let phone = searchResult[indexPath.row].phone
