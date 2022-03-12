@@ -13,6 +13,8 @@ class AddViewController: UIViewController {
     var contact: NSManagedObject!
     
     
+    
+   
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtLastname: UITextField!
     @IBOutlet weak var txtPhone: UITextField!

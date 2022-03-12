@@ -74,8 +74,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let vistaDetalle = segue.destination as? DetailViewController {
                 vistaDetalle.contact = selectedItem
             }
-    }
-
+        }
+            
 }
 
 }

@@ -67,7 +67,7 @@
                                             <outlet property="ivAvatar" destination="vNM-dZ-59o" id="r7s-Xf-yW5"/>
                                             <outlet property="lblName" destination="CEP-ko-Gun" id="RGX-zu-dCS"/>
                                             <outlet property="lblPhone" destination="d3b-3z-wl1" id="TUJ-Ih-75Q"/>
-                                            <segue destination="7YQ-Uz-GJ4" kind="show" id="jRc-eB-H3u"/>
+                                            <segue destination="7YQ-Uz-GJ4" kind="show" identifier="detail" id="jRc-eB-H3u"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -94,18 +94,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xxH-1v-hc7">
-                        <rightBarButtonItems>
-                            <barButtonItem image="plus" catalog="system" id="qmG-P2-oZu">
-                                <connections>
-                                    <segue destination="svI-P8-f1I" kind="show" id="KtL-gX-eqo"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="pencil" catalog="system" id="E7w-WB-dmZ">
-                                <connections>
-                                    <segue destination="zgo-BI-U2D" kind="show" id="lLh-sc-zmo"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="qmG-P2-oZu">
+                            <connections>
+                                <segue destination="svI-P8-f1I" kind="show" identifier="" id="KtL-gX-eqo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="myTable" destination="ToT-hT-XF6" id="oig-5H-jOz"/>
@@ -174,7 +167,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="SYO-0g-39a"/>
-                    <navigationItem key="navigationItem" id="Fsa-fA-q3g"/>
+                    <navigationItem key="navigationItem" id="Fsa-fA-q3g">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="YGT-8J-Jtt">
+                            <connections>
+                                <segue destination="zgo-BI-U2D" kind="show" identifier="update" id="QGN-UE-oxM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="image" destination="EWo-P6-zfN" id="a9c-q0-tik"/>
                         <outlet property="lblAdress" destination="0e9-1x-0t2" id="Xwk-81-1HP"/>
@@ -349,7 +348,7 @@
                         <outlet property="txtBirthdate" destination="Ipc-kv-7nj" id="QM6-cA-lmO"/>
                         <outlet property="txtCategory" destination="Kyz-Cr-kaC" id="5Nv-5f-TCA"/>
                         <outlet property="txtLastname" destination="ISZ-E3-VTk" id="U3x-qe-Tez"/>
-                        <outlet property="txtName" destination="ISZ-E3-VTk" id="vPz-3p-spm"/>
+                        <outlet property="txtName" destination="ZYF-bb-gRY" id="B6C-xL-qOs"/>
                         <outlet property="txtPhone" destination="fAf-Jz-kLc" id="VSE-yc-JVj"/>
                     </connections>
                 </viewController>
@@ -453,17 +452,28 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="zvh-9k-dp3"/>
                     <navigationItem key="navigationItem" id="Lde-hk-rr0">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="08o-nf-E2D"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="08o-nf-E2D">
+                            <connections>
+                                <action selector="save:" destination="zgo-BI-U2D" id="Sbh-H6-Bnh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="phone" destination="x7v-Tp-A0c" id="Pln-tp-Dc2"/>
+                        <outlet property="txtAdress" destination="g1I-fc-czZ" id="y3d-mA-gUU"/>
+                        <outlet property="txtBirthdate" destination="cD8-ZF-Icd" id="RxM-Ni-5rx"/>
+                        <outlet property="txtCategory" destination="wlb-Rp-u1E" id="shJ-3h-opJ"/>
+                        <outlet property="txtLastname" destination="cu7-54-87o" id="wZY-4x-2ck"/>
+                        <outlet property="txtName" destination="QxJ-dt-hsB" id="CVC-yK-jDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfr-oi-385" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880" y="462"/>
+            <point key="canvasLocation" x="2725" y="-238"/>
         </scene>
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>

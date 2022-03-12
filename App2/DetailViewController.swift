@@ -31,7 +31,16 @@ class DetailViewController: UIViewController {
             lblBirthday.text = contact.value(forKey: "birthdate") as! String?
             lblAdress.text = contact.value(forKey: "adress") as! String?        }
        
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+            
+            if segue.identifier == "update" {
+                if let vistaEdit = segue.destination as? EditViewController {
+                    vistaEdit.contact = self.contact
+                }
+            }
+    }
+
 
    
 }
