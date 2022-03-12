@@ -38,7 +38,7 @@ class EditViewController: UIViewController {
         contact.setValue(txtLastname.text, forKey: "lastname")
         contact.setValue(txtBirthdate.text, forKey: "birthdate")
         contact.setValue(phone.text, forKey: "phone")
-        contact.setValue(txtAdress.text, forKey: "address")
+        contact.setValue(txtAdress.text, forKey: "adress")
         contact.setValue(txtCategory.text, forKey: "category")
         CoreDataManager.shared.saveContext()
     }
